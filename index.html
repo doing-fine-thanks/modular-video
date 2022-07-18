@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modular Test Bed</title>
+
+    <script type = "text/javascript">
+        movie_map = {
+            "file": "resources/videos/cajun%231.mov",
+            "jump": 0,
+            "children": [
+                {
+                    "file": "resources/videos/gdc%232.1.mov",
+                    "jump": 10,
+                    "children": []
+                },
+                {
+                    "file": "resources/videos/jarjar%232.2.mov",
+                    "jump": 15,
+                    "children": []
+                }
+            ]
+        }
+
+        transitions = [];
+        current_video = null;
+
+        function swap_video(new_video) {
+            if(current_video !== null) {
+                current_video.style.display = "none";
+                current_video.pause();
+            }
+            current_video = new_video;
+            current_video.style.display = "block";
+            current_video.play();
+        }
+
+        function append_transition(root, transitions, movie_node, timpstamp_offset){
+            let base_time_in_millis = (movie_node["jump"] + timpstamp_offset) * 1000
+            console.log(movie_node["file"] + "is set to start @ " + base_time_in_millis);
+            let video = document.createElement("video");
+            video.setAttribute("controls", "controls");
+            video.src = movie_node["file"];
+            video.style.display = "none";
+            root.appendChild(video)
+            transitions.push(() => {
+                console.log("setting " + video + "to play @ " + base_time_in_millis)
+                setTimeout(() => swap_video(video), base_time_in_millis)
+            })
+            if("children" in movie_node && movie_node["children"].length > 0 ) {
+                let children = movie_node["children"]
+                let child_chosen = children[Math.floor(Math.random() * children.length)];
+                append_transition(root, transitions, child_chosen, movie_node["jump"])
+            }
+        }
+
+
+        window.onload = init;
+        function init () {
+            let root_elem = document.getElementById("root-document-hook");
+            append_transition(root_elem, transitions, movie_map, 0);
+
+            for(const transition of transitions){
+                transition();
+            }
+        }
+
+    </script>
+</head>
+    <body>
+        <div id="root-document-hook">
+        </div>
+
+    </body>
+</html>
