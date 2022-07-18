@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <title>Modular Test Bed</title>
 
+    <style>
+        .video-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-container video {
+            /* Make video to at least 100% wide and tall */
+            min-width: 100%;
+            min-height: 100%;
+
+            /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+            width: auto;
+            height: auto;
+
+            /* Center the video */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+
     <script type = "text/javascript">
         movie_map = {
             "file": "resources/videos/cajun%231.mov",
@@ -44,7 +70,14 @@
         function set_up_video_root(root, transitions, movie_node) {
             let video = document.createElement("video");
             video.setAttribute("controls", "controls");
-            video.src = movie_node["file"];
+            video.preload = "auto";
+
+            let source = document.createElement("source");
+            source.src = video.src = movie_node["file"];
+            source.type = "video/mp4";
+
+            video.appendChild(source);
+
 
             current_video = video;
             current_video.onplay = set_transtion_timeouts;
@@ -64,8 +97,14 @@
             console.log(movie_node["file"] + "is set to start @ " + base_time_in_millis);
             let video = document.createElement("video");
             video.setAttribute("controls", "controls");
-            video.src = movie_node["file"];
             video.style.display = "none";
+            video.preload = "auto";
+
+            let source = document.createElement("source");
+            source.src = video.src = movie_node["file"];
+            source.type = "video/mp4";
+
+            video.appendChild(source);
 
             root.appendChild(video)
             transitions.push(() => {
@@ -89,7 +128,7 @@
     </script>
 </head>
     <body>
-        <div id="root-document-hook">
+        <div class="video-container" id="root-document-hook">
         </div>
 
     </body>
