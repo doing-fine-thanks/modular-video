@@ -35,6 +35,30 @@
             current_video.play();
         }
 
+        function set_transtion_timeouts() {
+            for(const transition of transitions){
+                transition();
+            }
+        }
+
+        function set_up_video_root(root, transitions, movie_node) {
+            let video = document.createElement("video");
+            video.setAttribute("controls", "controls");
+            video.src = movie_node["file"];
+
+            current_video = video;
+            current_video.onplay = set_transtion_timeouts;
+
+            root.appendChild(video)
+
+            if("children" in movie_node && movie_node["children"].length > 0 ) {
+                let children = movie_node["children"]
+                let child_chosen = children[Math.floor(Math.random() * children.length)];
+                append_transition(root, transitions, child_chosen, movie_node["jump"])
+            }
+
+        }
+
         function append_transition(root, transitions, movie_node, timpstamp_offset){
             let base_time_in_millis = (movie_node["jump"] + timpstamp_offset) * 1000
             console.log(movie_node["file"] + "is set to start @ " + base_time_in_millis);
@@ -42,6 +66,7 @@
             video.setAttribute("controls", "controls");
             video.src = movie_node["file"];
             video.style.display = "none";
+
             root.appendChild(video)
             transitions.push(() => {
                 console.log("setting " + video + "to play @ " + base_time_in_millis)
@@ -57,13 +82,8 @@
 
         window.onload = init;
         function init () {
-            alert("modular media time?");
             let root_elem = document.getElementById("root-document-hook");
-            append_transition(root_elem, transitions, movie_map, 0);
-
-            for(const transition of transitions){
-                transition();
-            }
+            set_up_video_root(root_elem, transitions, movie_map);
         }
 
     </script>
