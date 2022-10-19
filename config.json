@@ -1,0 +1,743 @@
+{
+  "clips": [
+    {
+      "1": {
+        "file": "clips/1. Banter 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "2": {
+        "file": "clips/2. Banter 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "3": {
+        "file": "clips/3. Baptist Church 1 Carol 1 Work 1 Medical 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "4": {
+        "file": "clips/4. Carol 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "5": {
+        "file": "clips/5. Baptist Church 2 Divorce 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "6": {
+        "file": "clips/6. Divorce 2 Kentucky 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "7": {
+        "file": "clips/7. Intro.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "8": {
+        "file": "clips/8. Youth 1 Jack 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "9": {
+        "file": "clips/9. Julia 1 Philly 1-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "10": {
+        "file": "clips/10. Jack 2  Youth 2 Plainfield 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "11": {
+        "file": "clips/11. Jack 3 Youth 3 Plainfield 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "12": {
+        "file": "clips/12. Julia 2 DC 1 Death 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "13": {
+        "file": "clips/13. Youth 4 New York 1 Plainfield 3-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "14": {
+        "file": "clips/14. Jack 4 Norma 1-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "15": {
+        "file": "clips/15. Jack 5 DC 2 Birth 1-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "16": {
+        "file": "clips/16. Polio 1  Medical 2 Youth 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "17": {
+        "file": "clips/17. Polio 2 Medical 3 Old 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "18": {
+        "file": "clips/18. Polio 3 Death 3 medical 4.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "19": {
+        "file": "clips/19. Wedding 1 Plainfield 4.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "20": {
+        "file": "clips/20. Rich 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "21": {
+        "file": "clips/21. Mary 1 Kennelworth 1 Divorce 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "22": {
+        "file": "clips/22. Mary 2 Divorce 3 Rich 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "23": {
+        "file": "clips/23. Rich 3 College 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "24": {
+        "file": "clips/24. Young Adult 1 Work 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "25": {
+        "file": "clips/25. Young Adult 2 College 2 Dick 1 Dating 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "26": {
+        "file": "clips/26. Dick 2 Marriage 1 Pregnancy 1 Redbank 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "27": {
+        "file": "clips/27. Somerville 1 Chris 1 Martha 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "28": {
+        "file": "clips/28. Somerville 2 Ms P 1 Death 4 Marriage 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "29": {
+        "file": "clips/29. Banter 3.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "31": {
+        "file": "clips/31. Julia 4 Guido 2-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "32": {
+        "file": "clips/32. Julia 5 Guido 3 Erminia 1 Italy 1 Hazelton 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "33": {
+        "file": "clips/33. Julia 6 Guido 4 Death 5.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "34": {
+        "file": "clips/34. Julia 7 Youth 2-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "35": {
+        "file": "clips/35. Aunt Verna 1 Youth 3-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "36": {
+        "file": "clips/36. Youth 4 Flemington 1-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "37": {
+        "file": "clips/37. Jack 6 Gert 1 Toms River 1 Chicago 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "38": {
+        "file": "clips/38. Banter.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "39": {
+        "file": "clips/39. Jack 7 Guido 5.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "40": {
+        "file": "clips/40. Ending.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "41": {
+        "file": "clips/41. Henry 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "42": {
+        "file": "clips/42. Henry 2 Adult 1 Aunt Coleen 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "43": {
+        "file": "clips/43. Adult 2.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "44": {
+        "file": "clips/44. Adult 3 Martha 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "45": {
+        "file": "clips/45. Adult 4 Kids 1-.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "46": {
+        "file": "clips/46. Work 2 Martha 2 Emily 1 Bloomsbury 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "47": {
+        "file": "clips/47. Work 3 Divorce 4 Dick 3.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "48": {
+        "file": "clips/48. Kennelworth 2 Divorce 5 Jutland 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "49": {
+        "file": "clips/49. Kentucky 2 Tennessee 1 Plainfield 5 Adult 5 Parenting 1 Dick 4.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "50": {
+        "file": "clips/50. Jack 8 Death 6.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "51": {
+        "file": "clips/51. banter (other ending-).mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "52": {
+        "file": "clips/52. tornado wonder.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "53": {
+        "file": "clips/53. Youth 5 Adult 5 War 1 Dick 4.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "54": {
+        "file": "clips/54. Youth 6 Julia 8 Death 7.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "55": {
+        "file": "clips/55. Julia 9.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "56": {
+        "file": "clips/56. Death 8.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "57": {
+        "file": "clips/57. Death 9.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "58": {
+        "file": "clips/58. Death 10 Danny the Wonder Pony 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "59": {
+        "file": "clips/59. Death 11.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "60": {
+        "file": "clips/60. Lori 1 Youth 7.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "61": {
+        "file": "clips/61. Henry 3.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "62": {
+        "file": "clips/62. Danny the Wonder Pony 2 Hair Dressers 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "63": {
+        "file": "clips/63. Kentucky 3.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "64": {
+        "file": "clips/64. Kentucky 4.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "65": {
+        "file": "clips/65. Coleen 2 Kevin 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "66": {
+        "file": "clips/66. Henry 4 Death 12.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "67": {
+        "file": "clips/67. Henry 5 Dick 5 Penny 1.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      },
+      "68": {
+        "file": "clips/68. End.mp4",
+        "transitions": [
+          {
+            "name": "placeholder",
+            "jump_from_timestamp": -1,
+            "jump_to_clip": "placeholder",
+            "jump_to_timestamp": 0
+          }
+        ]
+      }
+    }
+  ]
+}
