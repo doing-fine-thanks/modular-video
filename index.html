@@ -36,7 +36,7 @@
                                 "name": "6-3-chris",
                                 "jump_from_timestamp": 277,
                                 "jump_to_clip": "6",
-                                "jump_to_timestamp": 116
+                                "jump_to_timestamp": 115
                             },
                             {
                                 "name": "2-4-em & toby",
@@ -1112,13 +1112,18 @@
         current_video = null;
 
         function swap_video(new_video) {
+            let old_video = null;
             if(current_video !== null) {
                 current_video.style.display = "none";
                 current_video.pause();
+                old_video = current_video;
             }
             current_video = new_video;
             current_video.style.display = "block";
             current_video.play();
+            if(old_video != null) {
+                old_video.remove()
+            }
         }
 
         function set_transtion_timeouts() {
@@ -1199,8 +1204,10 @@
                     let source = document.createElement("source");
                     source.src = video.src = movie_map.clips[movie_node.clip_name].file;
                     source.type = "video/mp4";
+                    video.onloadeddata = () => {video.currentTime = movie_node.start_next_at; };
+                    // has to be on .onloadeddata event, otherwise safari will overwrite
+                    // the set timestamp.
 
-                    video.currentTime = movie_node.start_next_at;
 
                     video.appendChild(source);
                     root.appendChild(video)
