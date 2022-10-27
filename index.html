@@ -1065,10 +1065,20 @@
                     transition = clip_metadata.transitions[chosen_clip_index]
                 }
 
+                let leave_time_compensation = 0;
+                console.log(transitions_manifest)
+                if(transitions_manifest.length > 0) {
+                    console.log(transitions_manifest.length)
+                    leave_time_compensation = transitions_manifest[transitions_manifest.length - 1].start_next_at
+                    console.log(leave_time_compensation)
+                }
+
+                console.log(transitions_manifest)
+
                 transitions_manifest.push(
                     {
                         "clip_name": transition.jump_to_clip,
-                        "leave_at": transition.jump_from_timestamp,
+                        "leave_at": transition.jump_from_timestamp - leave_time_compensation,
                         "start_next_at": transition.jump_to_timestamp
                     }
                 )
@@ -1084,29 +1094,29 @@
 
 
         function append_transition(root, transitions, movie_node, timestamp_offset){
-            let video = document.createElement("video");
-            video.setAttribute("controls", "controls");
-            video.style.display = "none";
-            video.preload = "auto";
-
-            let source = document.createElement("source");
-
-            console.log( movie_node)
-            console.log( movie_node.clip_name)
-            console.log( movie_map[movie_node.clip_name])
-            source.src = video.src = movie_map.clips[movie_node.clip_name].file;
-            source.type = "video/mp4";
-
-            video.currentTime = movie_node.start_next_at;
-
             let base_time_in_millis = movie_node.leave_at * 1000 + timestamp_offset
 
-            video.appendChild(source);
-
-            root.appendChild(video)
             transitions.push(() => {
-                console.log("setting " + video + " to play @ " + base_time_in_millis)
-                setTimeout(() => swap_video(video), base_time_in_millis)
+                console.log("setting " + movie_node.clip_name + " to play @ " + base_time_in_millis/1000)
+                setTimeout(() => {
+                    let video = document.createElement("video");
+                    video.setAttribute("controls", "controls");
+                    video.style.display = "none";
+                    video.preload = "auto";
+
+                    let source = document.createElement("source");
+
+                    console.log( movie_node)
+                    console.log( movie_map[movie_node.clip_name])
+                    source.src = video.src = movie_map.clips[movie_node.clip_name].file;
+                    source.type = "video/mp4";
+
+                    video.currentTime = movie_node.start_next_at;
+
+                    video.appendChild(source);
+                    root.appendChild(video)
+                    swap_video(video)
+                }, base_time_in_millis)
             })
 
             return base_time_in_millis
