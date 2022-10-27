@@ -74,7 +74,7 @@
                             },
                             {
                                 "name": "17-1-polio",
-                                "jump_from_timestamp": 81,
+                                "jump_from_timestamp": 80,
                                 "jump_to_clip": "17",
                                 "jump_to_timestamp": 0
                             }
@@ -144,6 +144,54 @@
                                 "name": "1",
                                 "jump_from_timestamp": 105,
                                 "jump_to_clip": "1",
+                                "jump_to_timestamp": 0
+                            },
+                            {
+                                "name": "8",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "8",
+                                "jump_to_timestamp": 0
+                            },
+                            {
+                                "name": "9",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "9",
+                                "jump_to_timestamp": 7
+                            },
+                            {
+                                "name": "12",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "12",
+                                "jump_to_timestamp": 0
+                            },
+                            {
+                                "name": "15",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "15",
+                                "jump_to_timestamp": 220
+                            },
+                            {
+                                "name": "20",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "20",
+                                "jump_to_timestamp": 3
+                            },
+                            {
+                                "name": "24",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "24",
+                                "jump_to_timestamp": 47
+                            },
+                            {
+                                "name": "29",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "29",
+                                "jump_to_timestamp": 0
+                            },
+                            {
+                                "name": "38",
+                                "jump_from_timestamp": 105,
+                                "jump_to_clip": "38",
                                 "jump_to_timestamp": 0
                             },
                         ]
@@ -236,7 +284,7 @@
                                 "jump_from_timestamp": 306,
                                 "jump_to_clip": "13",
                                 "jump_to_timestamp": 0
-                            }
+                            },
                         ]
                     },
                     "13": {
@@ -308,7 +356,13 @@
                                 "jump_from_timestamp": 143,
                                 "jump_to_clip": "19",
                                 "jump_to_timestamp": 0
-                            }
+                            },
+                            {
+                                "name": "52",
+                                "jump_from_timestamp": 143,
+                                "jump_to_clip": "52",
+                                "jump_to_timestamp": 0
+                            },
                         ]
                     },
                     "19": {
@@ -444,7 +498,13 @@
                                 "jump_from_timestamp": 118,
                                 "jump_to_clip": "27",
                                 "jump_to_timestamp": 0
-                            }
+                            },
+                            {
+                                "name": "52",
+                                "jump_from_timestamp": 118,
+                                "jump_to_clip": "52",
+                                "jump_to_timestamp": 0
+                            },
                         ]
                     },
                     "27": {
@@ -477,7 +537,14 @@
                     },
                     "29": {
                         "file": "clips/29. Banter 3.mp4",
-                        "transitions": []
+                        "transitions": [
+                            {
+                                "name": "31",
+                                "jump_from_timestamp": 261,
+                                "jump_to_clip": "31",
+                                "jump_to_timestamp": 0
+                            },
+                        ]
                     },
                     "31": {
                         "file": "clips/31. Julia 4 Guido 2-.mp4",
@@ -533,7 +600,13 @@
                                 "jump_from_timestamp": 256,
                                 "jump_to_clip": "34",
                                 "jump_to_timestamp": 0
-                            }
+                            },
+                            {
+                                "name": "52",
+                                "jump_from_timestamp": 256,
+                                "jump_to_clip": "52",
+                                "jump_to_timestamp": 0
+                            },
                         ]
                     },
                     "34": {
@@ -600,7 +673,20 @@
                     },
                     "38": {
                         "file": "clips/38. Banter.mp4",
-                        "transitions": []
+                        "transitions": [
+                            {
+                                "name": "39",
+                                "jump_from_timestamp": 266,
+                                "jump_to_clip": "39",
+                                "jump_to_timestamp": 0
+                            },
+                            {
+                                "name": "52",
+                                "jump_from_timestamp": 266,
+                                "jump_to_clip": "52",
+                                "jump_to_timestamp": 0
+                            },
+                        ]
                     },
                     "39": {
                         "file": "clips/39. Jack 7 Guido 5.mp4",
@@ -637,6 +723,12 @@
                                 "jump_from_timestamp": 38,
                                 "jump_to_clip": "56",
                                 "jump_to_timestamp": 220
+                            },
+                            {
+                                "name": "52",
+                                "jump_from_timestamp": 38,
+                                "jump_to_clip": "52",
+                                "jump_to_timestamp": 0
                             },
                         ]
                     },
@@ -768,7 +860,13 @@
                                 "jump_from_timestamp": 572,
                                 "jump_to_clip": "49",
                                 "jump_to_timestamp": 0
-                            }
+                            },
+                            {
+                                "name": "52",
+                                "jump_from_timestamp": 572,
+                                "jump_to_clip": "52",
+                                "jump_to_timestamp": 0
+                            },
                         ]
                     },
                     "49": {
@@ -1066,15 +1164,9 @@
                 }
 
                 let leave_time_compensation = 0;
-                console.log(transitions_manifest)
                 if(transitions_manifest.length > 0) {
-                    console.log(transitions_manifest.length)
                     leave_time_compensation = transitions_manifest[transitions_manifest.length - 1].start_next_at
-                    console.log(leave_time_compensation)
                 }
-
-                console.log(transitions_manifest)
-
                 transitions_manifest.push(
                     {
                         "clip_name": transition.jump_to_clip,
@@ -1105,9 +1197,6 @@
                     video.preload = "auto";
 
                     let source = document.createElement("source");
-
-                    console.log( movie_node)
-                    console.log( movie_map[movie_node.clip_name])
                     source.src = video.src = movie_map.clips[movie_node.clip_name].file;
                     source.type = "video/mp4";
 
