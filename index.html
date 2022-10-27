@@ -1118,6 +1118,7 @@
                 current_video.pause();
                 old_video = current_video;
             }
+
             current_video = new_video;
             current_video.style.display = "block";
             current_video.play();
@@ -1144,14 +1145,43 @@
 
             current_video = video;
             current_video.onplay = set_transtion_timeouts;
-            root.appendChild(video)
+            root.appendChild(video);
 
-            process_transition(movie_node.clips.root, transitions_manifest)
+            console.log("Permutation Path:");
+            console.log(transitions_manifest)
+
+            process_transition(movie_node.clips.root, transitions_manifest);
+
+            let next_movie_node = transitions_manifest.shift();
+            set_up_event_trigger_and_swap(root, current_video, next_movie_node);
+        }
+
+        function set_up_event_trigger_and_swap(root_element, video_element, next_transition) {
+            video_element.ontimeupdate = (event) => {
+                if(current_video.currentTime >= next_transition.leave_at){
+                    let video = document.createElement("video");
+                    video.setAttribute("controls", "controls");
+                    video.style.display = "none";
+                    video.preload = "auto";
+                    video.playsInline = true;
+
+                    let source = document.createElement("source");
+                    source.src = video.src = movie_map.clips[next_transition.clip_name].file;
+                    source.type = "video/mp4";
+                    video.onloadeddata = () => {video.currentTime = next_transition.start_next_at; };
+                    // has to be on .onloadeddata event, otherwise safari will overwrite
+                    // the set timestamp.
+
+                    video.appendChild(source);
+                    root_element.appendChild(video);
+                    swap_video(video);
 
 
-            let time_offset = 0;
-            for(const transition of transitions_manifest) {
-                time_offset = append_transition(root, transitions_entities, transition, time_offset)
+                    console.log("Set to switch to clip " + next_transition.clip_name + "@" + next_transition.start_next_at);
+                    console.log(transitions_manifest)
+
+                    set_up_event_trigger_and_swap(root_element, video, transitions_manifest.shift());
+                }
             }
         }
 
@@ -1168,14 +1198,10 @@
                     transition = clip_metadata.transitions[chosen_clip_index]
                 }
 
-                let leave_time_compensation = 0;
-                if(transitions_manifest.length > 0) {
-                    leave_time_compensation = transitions_manifest[transitions_manifest.length - 1].start_next_at
-                }
                 transitions_manifest.push(
                     {
                         "clip_name": transition.jump_to_clip,
-                        "leave_at": transition.jump_from_timestamp - leave_time_compensation,
+                        "leave_at": transition.jump_from_timestamp,
                         "start_next_at": transition.jump_to_timestamp
                     }
                 )
@@ -1186,38 +1212,6 @@
                 process_transition(next_clip_meta, transitions_manifest, transition.jump_to_timestamp)
             }
         }
-
-
-
-
-        function append_transition(root, transitions, movie_node, timestamp_offset){
-            let base_time_in_millis = movie_node.leave_at * 1000 + timestamp_offset
-
-            transitions.push(() => {
-                console.log("setting " + movie_node.clip_name + " to play @ " + base_time_in_millis/1000)
-                setTimeout(() => {
-                    let video = document.createElement("video");
-                    video.setAttribute("controls", "controls");
-                    video.style.display = "none";
-                    video.preload = "auto";
-
-                    let source = document.createElement("source");
-                    source.src = video.src = movie_map.clips[movie_node.clip_name].file;
-                    source.type = "video/mp4";
-                    video.onloadeddata = () => {video.currentTime = movie_node.start_next_at; };
-                    // has to be on .onloadeddata event, otherwise safari will overwrite
-                    // the set timestamp.
-
-
-                    video.appendChild(source);
-                    root.appendChild(video)
-                    swap_video(video)
-                }, base_time_in_millis)
-            })
-
-            return base_time_in_millis
-        }
-
 
         window.onload = init;
         function init () {
