@@ -10,17 +10,49 @@
             min-width: 100%;
         }
         .video-container video {
-            min-width: 100%;
-
-            max-width: 100%;
+            width: 100%;
+            height: 100vh;
+            position: absolute;
         }
 
         body {
             background-color: black;
         }
+
+        #modal-overlay {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #modal-overlay #modal {
+            max-width: 650px;
+            width: 100%;
+            background: white;
+            height: 450px;
+
+            display: flex;
+            flex-direction: column;
+            padding:10px;
+        }
+
+        #modal-overlay #modal .modal-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+        }
     </style>
 
     <script type = "text/javascript">
+
+
+        //movie harness
+
+
         movie_map = {
             "clips": {
                     "1": {
@@ -1137,20 +1169,20 @@
             let video = document.createElement("video");
             video.setAttribute("controls", "controls");
             video.preload = "auto";
+            video.playsInline = true;
 
             let source = document.createElement("source");
             source.src = video.src = movie_node.clips.root.file;
             source.type = "video/mp4";
             video.appendChild(source);
-
             current_video = video;
             current_video.onplay = set_transtion_timeouts;
             root.appendChild(video);
 
-            console.log("Permutation Path:");
-            console.log(transitions_manifest)
 
             process_transition(movie_node.clips.root, transitions_manifest);
+            console.log("Permutation Path:");
+            console.log(transitions_manifest)
 
             let next_movie_node = transitions_manifest.shift();
             set_up_event_trigger_and_swap(root, current_video, next_movie_node);
@@ -1217,6 +1249,16 @@
         function init () {
             let root_elem = document.getElementById("root-document-hook");
             set_up_video_root(root_elem, transitions_manifest, transitions_entities, movie_map);
+
+            // Hide Modal
+            const modalWindowOverlay = document.getElementById("modal-overlay");
+            const closeModalButton = document.getElementById("close-modal");
+
+            const hideModalWindow = () => {
+                modalWindowOverlay.style.display = 'none';
+            }
+
+            closeModalButton.addEventListener("click", hideModalWindow);
         }
 
     </script>
@@ -1225,5 +1267,41 @@
         <div class="video-container" id="root-document-hook">
         </div>
 
+        <div id="modal-overlay">
+            <div id="modal">
+
+                <div class="modal-header">
+                    <h3><i>Verna Gray</i></h3>
+                </div>
+
+                <div class="modal-content">
+                    <p>This is a documentary of my family, it's past, and my grandmother's story telling.</p>
+                    <p>What will play is one of 1,286,384,503 different permutations through the 5 hours of
+                        footage gathered to create this video.
+                    </p>
+                    <p>My grandmother will explain it best, but I will say it in my own words here:
+                        my family's history isn't a straight line, it's a complicated web with different folds
+                        feeling closer to the tip of our tongues each time we go to feel them.
+                    </p>
+                    <p>This is an attempt to archive my family's history through my grandmother's weaving.</p>
+                    <p>If you want to feel a different fold, reload and replay the piece.
+                        For more on the piece,
+                        <a href="http://logan-h-g-davis.com/#http://logan-h-g-davis.com/content-panel/projects/Verna.html">go here</a>.
+                    </p>
+
+                    <br>
+                    <br>
+                    <p><i>Note: This is an experience meant for a desktop, restrictions on mobile will
+                        require you to hit play every time the video transitions.
+                    </i></p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button id="close-modal">Close & Continue</button>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>
